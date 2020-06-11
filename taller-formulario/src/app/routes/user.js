@@ -20,4 +20,13 @@ module.exports = (app) => {
       res.redirect('/');
     });
   });
+
+  app.get('/eliminar/:id', (req, res) => {
+    const { id } = req.params;
+    connection.query(' DELETE FROM datos WHERE id =?', [id], (err, result) => {
+      res.redirect('/');
+    });
+  });
+
+
 };

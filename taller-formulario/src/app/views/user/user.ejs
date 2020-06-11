@@ -23,7 +23,9 @@
                         <td><%= user[i].id %></td>
                         <td><%= user[i].nombre %></td>
                         <td><%= user[i].email %></td>
-                        <td> <input type="submit" class="btn btn-info" value="Eliminar"> </td>
+                        <td>
+                            <a href="/eliminar/<%= user[i].id %>"  class="btn btn-info" >Eliminar</a>
+                        </td>
                     </tr>
                     <% } %>  
                 </table>
